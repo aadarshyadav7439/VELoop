@@ -1,0 +1,4 @@
+import {Eye,FileCheck,LockKeyhole,Scale} from "lucide-react";
+import styles from "./TrustSection.module.css";
+const items=[['01','Clear rules',FileCheck,'Entry requirements, eligibility and claim rules are presented before participation.'],['02','Secure flow',LockKeyhole,'Sensitive fulfillment details are requested only from verified winners.'],['03','Fair participation',Scale,'Winner counts and participation configuration live in structured giveaway data.'],['04','Reward transparency',Eye,'Each reward shows its prize type, currency, entry fee and fulfillment path.']];
+export default function TrustSection(){return <section className={styles.section}><div className={styles.heading}><span>WHY TRUST THE EXPERIENCE</span><h2>Rewarding without the casino feel.</h2></div><div className={styles.grid}>{items.map(([n,t,Icon,d])=><article key={n}><div className={styles.top}><b>{n}</b><Icon size={17}/></div><h3>{t}</h3><p>{d}</p></article>)}</div></section>}

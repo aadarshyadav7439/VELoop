@@ -1,0 +1,1 @@
+.wrap{display:flex;flex-direction:column;gap:.2rem}.wrap span{font-size:.59rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}.wrap strong{font:800 clamp(.9rem,2vw,1.1rem) var(--display);color:var(--text)}.wrap i{font-style:normal;color:#666d87}.compact strong{font-size:.72rem}

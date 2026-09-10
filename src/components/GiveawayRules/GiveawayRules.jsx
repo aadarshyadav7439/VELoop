@@ -1,0 +1,4 @@
+import {ChevronDown} from "lucide-react";
+import {useState} from "react";
+import styles from "./GiveawayRules.module.css";
+export default function GiveawayRules({rules=[]}){const [open,setOpen]=useState(0);return <section className={styles.section} id="rules"><div className={styles.heading}><span>TRANSPARENCY</span><h2>Giveaway Rules & Guidelines</h2><p>Demo policy text is clearly separated so it can be replaced by final backend-controlled rules.</p></div><div className={styles.card}>{rules.map((rule,i)=><div className={styles.item} key={rule.title}><button onClick={()=>setOpen(open===i?-1:i)} aria-expanded={open===i}><span><b>{String(i+1).padStart(2,"0")}</b>{rule.title}</span><ChevronDown size={17} className={open===i?styles.rotate:""}/></button>{open===i&&<p>{rule.text}</p>}</div>)}</div></section>}
